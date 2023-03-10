@@ -1,0 +1,19 @@
+* {
+    box-sizing:border-box;
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: local("Montserrat-Regular");
+    src: url(../fonts/Montserrat-Regular.ttf)
+}
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: local("Montserrat-SemiBold");
+    src: url(../fonts/Montserrat-SemiBold.ttf)
+}
+html {
+    font-family: "Montserrat-Regular";
+}
+body {
+    background-color: #ede8d7f9;
+}
