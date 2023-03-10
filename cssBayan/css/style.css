@@ -20,3 +20,18 @@ body {
 h1 {
     font-family: "Montserrat-SemiBold";
 }
+.accordion {
+    margin: 0 auto;
+    max-width: 35rem;
+    cursor: pointer;
+    
+}
+hr {
+    border: none;
+    border-top: 0.05rem solid rgb(180, 190, 224)
+}
+.accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
