@@ -11,27 +11,100 @@
     src: local("Montserrat-SemiBold");
     src: url(../fonts/Montserrat-SemiBold.ttf)
 }
-html {
+body {
+    font-family: "Montserrat-SemiBold";
+    background-color: #ede8d7f9;
+    font-size: 1rem;
+}
+h2 {
     font-family: "Montserrat-Regular";
 }
-body {
-    background-color: #ede8d7f9;
-}
-h1 {
-    font-family: "Montserrat-SemiBold";
-}
-.accordion {
+.container {
     margin: 0 auto;
-    max-width: 35rem;
+    max-width: 50rem;
     cursor: pointer;
-    
 }
 hr {
     border: none;
-    border-top: 0.05rem solid rgb(180, 190, 224)
+    border-top: 0.05rem solid rgb(180, 190, 224);
+    margin-bottom: 1rem;
 }
-.accordion-header {
+.accordion {
+    border-bottom: 0.05rem solid rgb(180, 190, 224)
+}
+.accordion-title {
+    display: block;
+    cursor: pointer;
+}
+.accordion-input {
+    appearance: none;
+    -webkit-appearance: none;
+}
+.accordion-input:checked + .accordion-content {
+    display: block;
+}
+.accordion-content {
+    display: none;
+}
+/* .container {
+    margin: 0 auto;
+    max-width: 50rem;
+    cursor: pointer;
+}
+.accordion-input,
+.accordion-content {
+    display: none;
+}
+.accordion-title {
     display: flex;
-    align-items: center;
-    padding: 1rem;
+    cursor: pointer;
+    justify-content: space-between;
+    position: relative;
 }
+.accordion-title::after {
+    content: url("../images/plus.png");
+}
+.tab :checked + .accordion-title::after {
+    content: url("../images/cross.png");
+}
+.tab :checked + .accordion-title + .accordion-content {
+    display: block;
+} */
+
+
+
+/* .accordion {
+    margin: 0 auto;
+    max-width: 50rem;
+    cursor: pointer;
+}
+.accordion-item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.accordion-title {
+    margin-bottom: 0.5rem;
+    display: block;
+    padding: 1rem 0rem 0.5rem;
+    cursor: pointer;
+}
+.accordion-input{
+    appearance: none;
+}
+.memes {
+    display: none;
+}
+.accordion-input :checked > .memes {
+    display: block;
+}
+.accordion-memes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.memes img {
+    width: 20rem;
+    height: 15rem;
+} */
