@@ -35,6 +35,8 @@ hr {
 .accordion-title {
     display: block;
     cursor: pointer;
+    position: relative;
+    justify-content: space-between;
 }
 .accordion-input {
     appearance: none;
@@ -46,21 +48,15 @@ hr {
 .accordion-content {
     display: none;
 }
-/* .container {
-    margin: 0 auto;
-    max-width: 50rem;
-    cursor: pointer;
+/* .accordion-input::after {
+    content: url("../images/plus.png");
 }
-.accordion-input,
-.accordion-content {
-    display: none;
-}
-.accordion-title {
-    display: flex;
-    cursor: pointer;
-    justify-content: space-between;
-    position: relative;
-}
+.accordion-input:checked::after {
+    content: url("./images/cross.png");
+} */
+/* 
+
+
 .accordion-title::after {
     content: url("../images/plus.png");
 }
@@ -69,7 +65,7 @@ hr {
 }
 .tab :checked + .accordion-title + .accordion-content {
     display: block;
-} */
+} */ */
 
 
 
