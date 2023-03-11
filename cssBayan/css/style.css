@@ -81,8 +81,18 @@ hr {
     height: 50rem;
 }
 /* Desktop version */
-@media (min-width: 821px) {
-    
+@media (min-width: 821px) and (max-width: 2500px) {
+    .accordion-title:hover::after {
+        content: url("../images/plus.png");
+        display: flex;
+    }
+    .accordion-input:checked + .accordion-title:hover::after {
+        content: url("../images/cross.png");
+        display: flex;
+    }
+    .accordion-input:hover ~ .accordion-content {
+        max-height: 50rem;
+    }
 }
 
 /* Tablet version */
