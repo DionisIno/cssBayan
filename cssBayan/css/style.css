@@ -14,93 +14,161 @@
 body {
     font-family: "Montserrat-SemiBold";
     background-color: #ede8d7f9;
-    font-size: 1rem;
+    font-size: 1.6rem;
+}
+h1 {
+    padding-left: 1rem;
 }
 h2 {
     font-family: "Montserrat-Regular";
 }
 .container {
     margin: 0 auto;
-    max-width: 50rem;
+    max-width: 45rem;
     cursor: pointer;
 }
 hr {
     border: none;
     border-top: 0.05rem solid rgb(180, 190, 224);
-    margin-bottom: 1rem;
+    margin-bottom: 0.1rem;
 }
 .accordion {
-    border-bottom: 0.05rem solid rgb(180, 190, 224)
+    border-bottom: 0.05rem solid rgb(180, 190, 224);
+    cursor: pointer;
+    padding: 0 1rem 0 1rem;
 }
 .accordion-title {
-    display: block;
+    display: flex;
+    width: 100%;
     cursor: pointer;
     position: relative;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 .accordion-input {
     appearance: none;
     -webkit-appearance: none;
-}
-.accordion-input:checked + .accordion-content {
-    display: block;
+    cursor: pointer;
 }
 .accordion-content {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s cubic-bezier(0.4, 0, 1, 1);;
 }
-/* .accordion-input::after {
-    content: url("../images/plus.png");
-}
-.accordion-input:checked::after {
-    content: url("./images/cross.png");
-} */
-/* 
-
-
-.accordion-title::after {
-    content: url("../images/plus.png");
-}
-.tab :checked + .accordion-title::after {
-    content: url("../images/cross.png");
-}
-.tab :checked + .accordion-title + .accordion-content {
-    display: block;
-} */ */
-
-
-
-/* .accordion {
-    margin: 0 auto;
-    max-width: 50rem;
-    cursor: pointer;
-}
-.accordion-item {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-.accordion-title {
-    margin-bottom: 0.5rem;
-    display: block;
-    padding: 1rem 0rem 0.5rem;
-    cursor: pointer;
-}
-.accordion-input{
-    appearance: none;
-}
-.memes {
-    display: none;
-}
-.accordion-input :checked > .memes {
-    display: block;
-}
-.accordion-memes {
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    height: 100%;
+    width: auto;
 }
-.memes img {
-    width: 20rem;
-    height: 15rem;
-} */
+.image-container img {
+    width: 25rem;
+    height: 20rem;
+}
+.accordion-input:checked ~ .accordion-content {
+    max-height: 50rem;
+}
+.accordion-title::after {
+    content: url("../images/plus.png");
+    display: none;
+}
+.accordion-input:checked + .accordion-title::after {
+    content: url("../images/cross.png");
+    display: none;
+}
+.footer {
+    height: 50rem;
+}
+/* Desktop version */
+@media (min-width: 821px) {
+    
+}
+
+/* Tablet version */
+@media (max-width: 820px) {
+    .container {
+        margin: 0 auto;
+        max-width: 30rem;
+        cursor: pointer;
+    }
+    body {
+        font-size: 14px;
+    }
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: auto;
+    }
+    .image-container img {
+        min-width: 18rem;
+        height: auto;
+    }
+    .accordion-input:checked ~ .accordion-content {
+        max-height: 30rem;
+    }
+    h1 {
+        padding-left: 1rem;
+    }
+    h2 {
+        font-size: 14px;
+    }
+    .accordion {
+        padding: 0 1rem 0 1rem;
+    }
+    .accordion-title::after {
+        content: url("../images/plus.png");
+        display: flex;
+    }
+    .accordion-input:checked + .accordion-title::after {
+        content: url("../images/cross.png");
+        display: flex;
+    }
+    .footer {
+        height: 10rem;
+    }
+}
+
+/* Mobile version */
+@media (max-width: 320px) {
+    .container {
+        max-width: 100%;
+        cursor: pointer;
+    }
+    body {
+        font-size: 12px;
+    }
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: auto;
+    }
+    .image-container img {
+        min-width: 10rem;
+        height: auto;
+    }
+    .accordion-input:checked ~ .accordion-content {
+        max-height: 30rem;
+    }
+    h1 {
+        padding-left: 1rem;
+    }
+    h2 {
+        font-size: 12px;
+    }
+    .accordion {
+        padding: 0 1rem 0 1rem;
+    }
+    .accordion-title::after {
+        content: url("../images/plus.png");
+        display: flex;
+    }
+    .accordion-input:checked + .accordion-title::after {
+        content: url("../images/cross.png");
+        display: flex;
+    }
+}
