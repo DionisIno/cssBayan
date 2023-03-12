@@ -95,14 +95,6 @@ hr {
         content: url("../images/cross.png");
         display: block;
     }
-    /* .accordion-title:hover::after {
-        content: url("../images/plus.png");
-        display: flex;
-    } */
-    /* .accordion-input:checked + .accordion-title:hover::after {
-        content: url("../images/cross.png");
-        display: flex;
-    } */
     .accordion-input:hover ~ .accordion-content {
         max-height: 50rem;
     }
