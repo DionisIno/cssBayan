@@ -87,14 +87,22 @@ hr {
 }
 /* Desktop version */
 @media (min-width: 821px) and (max-width: 2500px) {
-    .accordion-title:hover::after {
+    .container:hover .accordion-input + .accordion-title::after {
+        content: url("../images/plus.png");
+        display: block;
+    }
+    .container:hover .accordion-input:checked + .accordion-title::after {
+        content: url("../images/cross.png");
+        display: block;
+    }
+    /* .accordion-title:hover::after {
         content: url("../images/plus.png");
         display: flex;
-    }
-    .accordion-input:checked + .accordion-title:hover::after {
+    } */
+    /* .accordion-input:checked + .accordion-title:hover::after {
         content: url("../images/cross.png");
         display: flex;
-    }
+    } */
     .accordion-input:hover ~ .accordion-content {
         max-height: 50rem;
     }
@@ -156,7 +164,7 @@ hr {
         cursor: pointer;
     }
     body {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .image-container {
         display: flex;
@@ -173,10 +181,10 @@ hr {
         max-height: 30rem;
     }
     h1 {
-        padding-left: 1rem;
+        padding-left: 1.1rem;
     }
     h2 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .accordion {
         padding: 0 1rem 0 1rem;
